@@ -1,5 +1,30 @@
-.hello {
-    color: red;
-    height: 500px;
-    background: url('./cat.png');
+.banner {
+    height: 141px;
+    width: 100%;
+    background-color: lightgray;
+    border-bottom: 15px solid grey;
+}
+
+.banner > .left {
+    float: left;
+    width: 100px;
+    background-color: red;
+}
+
+.banner > .right {
+    float: right;
+}
+
+.banner > img {
+    height: 700px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+canvas {
+    width: 301px;
+    height: 270px;
+    image-rendering: pixelated;
+
+    
 }

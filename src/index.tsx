@@ -1,17 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
+import './reset.css';
 import './style.css';
-import Cat from './cat.png';
-
-import PrintMe from './print';
-
-function Component() {
-    return <div className='hello'>Hello World</div>;
-}
-
-function Icon() {
-    return <img src={Cat} />;
-}
+import Tuna from './tuna.png';
+import Pixels from './pixels';
 
 const reactEntry = document.createElement('div');
 reactEntry.id = 'root';
@@ -20,8 +12,14 @@ document.body.appendChild(reactEntry);
 const root = createRoot(reactEntry);
 root.render(
     <React.StrictMode>
-        <Component />
-        <PrintMe />
-        <Icon />
+        <div className='banner'>
+            <div className='left'>
+                <p>hello</p>
+            </div>
+            <div className='right'>
+                <Pixels />
+            </div>
+            {/* <img src={Tuna} /> */}
+        </div>
     </React.StrictMode>
 );
