@@ -13,13 +13,12 @@ const root = createRoot(reactEntry);
 root.render(
     <React.StrictMode>
         <div className='banner'>
-            <div className='left'>
-                <p>hello</p>
-            </div>
             <div className='right'>
                 <Pixels />
             </div>
             {/* <img src={Tuna} /> */}
         </div>
+        <div className='side-bar'></div>
+        <div className='projects'></div>
     </React.StrictMode>
 );

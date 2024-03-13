@@ -1,30 +1,31 @@
 .banner {
-    height: 141px;
+    height: 140px;
     width: 100%;
-    background-color: lightgray;
-    border-bottom: 15px solid grey;
-}
-
-.banner > .left {
-    float: left;
-    width: 100px;
-    background-color: red;
+    border: 2px solid lightgrey;
 }
 
 .banner > .right {
     float: right;
+    width: 240px;
 }
 
-.banner > img {
-    height: 700px;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
+.side-bar {
+    display: inline-block;
+    width: 20%;
+    height: 900px;
+    border: 2px solid lightgrey;
+}
+
+.projects {
+    display: inline-block;
+    width: 80%;
+    height: 900px;
+    border: 2px solid lightgrey;
 }
 
 canvas {
-    width: 301px;
-    height: 270px;
+    width: 240px;
+    height: 216px;
     image-rendering: pixelated;
-
-    
+    position: absolute;
 }
