@@ -19,7 +19,7 @@ export default function Pixels() {
             ctx.drawImage(image, 0, 0);
         };
         image.src = Tuna;
-    });
+    }, []);
 
     return <canvas ref={ref} width="160" height="144"></canvas>;
 }
