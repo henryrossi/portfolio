@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import getProjects from "./projects";
 
 export function loader() {

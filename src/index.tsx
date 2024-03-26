@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './reset.css';
 import './style.css';
-import Portfolio, { loader as portfolioLoader } from './portfolio';
-import ProjectList, { loader as projectListLoader } from './project-list';
-import Project, { loader as projectLoader } from './project';
-import ErrorPage from './error-page';
+import Portfolio, { loader as portfolioLoader } from './Portfolio';
+import ProjectList, { loader as projectListLoader } from './ProjectList';
+import Project, { loader as projectLoader } from './Project';
+import ErrorPage from './ErrorPage';
 
 const router = createBrowserRouter([
     {
