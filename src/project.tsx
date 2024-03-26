@@ -1,12 +1,10 @@
 import * as React from "react";
 import { useLoaderData } from "react-router-dom";
 import type { Params } from "react-router-dom";
-import getProjects from "./projects";
+import { getProject, ProjectInformation } from "./projects";
 
-export function loader({ params }: { params: Params<"project">}) {
-    const project = getProjects().find(
-            proj => proj.split(" ")[1] == params.project
-        );
+export function loader({ params }: { params: Params<"project">}) : ProjectInformation {
+    const project = params.project ? getProject(params.project) : undefined
     if (!project) {
         throw new Response("", {
             status: 404,
@@ -17,7 +15,7 @@ export function loader({ params }: { params: Params<"project">}) {
 }
 
 export default function Project() {
-    const project = useLoaderData() as string;
+    const project = useLoaderData() as ProjectInformation;
 
-    return <p>{project}</p>
+    return <p>{project.name}</p>
 }

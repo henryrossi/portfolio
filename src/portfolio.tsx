@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Outlet, useLoaderData, Link } from "react-router-dom";
-import getProjects from "./projects";
+import { Outlet, useLoaderData, Link, NavLink } from "react-router-dom";
+import { getProjectNames } from "./projects";
 
 export function loader() {
-    return getProjects();
+    return getProjectNames();
 }
 
 export default function Portfolio() {
@@ -16,14 +16,27 @@ export default function Portfolio() {
                 <p>featuring tuna</p>
             </div>
             <div className="side-menu">
-                <Link to="">Project List</Link>
+                <NavLink to="" className="projects-link">Projects</NavLink>
+                <ul>
                 {
                     projects.map(
-                            proj => <Link key={proj + " button"} to={proj.split(" ")[1]}>
-                                {proj}
-                            </Link>
+                            proj => <li key={proj + "-link"}>
+                                <NavLink 
+                                    to={`${proj}`}
+                                    className={({ isActive, isPending }) =>
+                                        isActive
+                                            ? "active"
+                                            : isPending
+                                            ? "pending"
+                                            : ""
+                                    }   
+                                >
+                                    {proj}
+                                </NavLink>
+                            </li>
                         )
                 }
+                </ul>
             </div>
             <div className="projects">
                 <Outlet />
