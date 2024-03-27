@@ -3,14 +3,22 @@
 .page {
     width: 100%;
     height: 100vh;
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 600;
     --dark-background-color: #DBD9CC;
     --light-background-color: #F3F3EC;
     --purple-title-color: #7B6172;
     --sub-title-color: #9C9B90;
     --tan-title-color: #88877A;
+    --tag-background-blue: #42BBF2;
+    --tag-background-green: #8AD38A;
+    --tag-background-red: #F3493A;
+    --tag-background-purple: #BE85F0;
+    --tag-background-yellow: #FADC00;
+    --tag-background-orange: #F98E26;
+    --tag-background-pink: #F09EB4;
+    --tag-background-black: #694859;
     background-color: var(--dark-background-color);
-    font-family: "Hind Siliguri", sans-serif;
-    font-weight: 600;
 }
 
 
@@ -84,15 +92,64 @@
 }
 
 .project {
-    width: 100%;
-    height: 250px;
+    width: 99%;
+    height: 200px;
     margin-bottom: 4%;
     border-radius: 15px;
-    text-align: center;
     background-color: var(--light-background-color);
 }
 
+.project > .info {
+    width: 60%;
+    padding: 30px 3%;
+}
 
+.project > .info > h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--tan-title-color);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 10px 15px 0;
+    padding: 7px 10px;
+    border-radius: 15px;
+    color: var(--light-background-color);
+    background-color: var(--purple-title-color);
+}
+
+.project > .info > p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--tan-title-color);
+}
+
+.blue {
+    background-color: var(--tag-background-blue);
+}
+.green {
+    background-color: var(--tag-background-green);
+}
+.red {
+    background-color: var(--tag-background-red);
+}
+.purple {
+    background-color: var(--tag-background-purple);
+}
+.yellow {
+    background-color: var(--tag-background-yellow);
+}
+.orange {
+    background-color: var(--tag-background-orange);
+}
+.pink {
+    background-color: var(--tag-background-pink);
+}
+.black {
+    background-color: var(--tag-background-black);
+}
 
 
 canvas {
