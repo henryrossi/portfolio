@@ -1,7 +1,7 @@
 import * as React from "react";
-import Tuna from "./tuna.png";
+import TunaPic from "./tuna.png";
 
-export default function Pixels() {
+export default function Tuna() {
   const ref = React.useRef(null);
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ export default function Pixels() {
     image.onload = () => {
       ctx.drawImage(image, 0, 0);
     };
-    image.src = Tuna;
+    image.src = TunaPic;
   }, []);
 
   return <canvas ref={ref} width="160" height="144"></canvas>;

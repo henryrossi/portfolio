@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Outlet, useLoaderData, Link, NavLink } from "react-router-dom";
 import { getProjectNames } from "./projects";
+import Tuna from "./Tuna";
 
 export function loader() {
   return getProjectNames();
@@ -12,8 +13,13 @@ export default function Portfolio() {
   return (
     <div className="page">
       <div className="banner">
-        <h1>Henry Rossi's Portfolio</h1>
-        <p>featuring tuna</p>
+        <div className="left">
+          <h1>Henry Rossi's Portfolio</h1>
+          <p>featuring tuna</p>
+        </div>
+        <div className="right">
+          <Tuna />
+        </div>
       </div>
       <div className="side-menu">
         <NavLink to="" className="projects-link">Projects</NavLink>
