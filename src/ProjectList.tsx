@@ -14,13 +14,13 @@ export default function ProjectList() {
       {projects.map(proj => 
         <li key={proj.name}>
           <Link  to={proj.name}>
-            <div className="project">
-              <div className="info">
+            <div className="project-preview">
+              <div className="project-info-section">
                 <h2>{proj.name}</h2>
                 <ul>
                   {proj.tags && proj.tags.map(tag =>
                     <li 
-                      key={proj.name + tag}
+                      key={proj.name + tag.name}
                       className={"tag " + tag.color}
                     >
                       {tag.name}
