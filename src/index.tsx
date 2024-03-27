@@ -9,29 +9,29 @@ import Project, { loader as projectLoader } from './Project';
 import ErrorPage from './ErrorPage';
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Portfolio />,
+  {
+    path: "/",
+    element: <Portfolio />,
+    errorElement: <ErrorPage />,
+    loader: portfolioLoader,
+    children: [
+      {
         errorElement: <ErrorPage />,
-        loader: portfolioLoader,
         children: [
-            {
-                errorElement: <ErrorPage />,
-                children: [
-                    {
-                        index: true, 
-                        element: <ProjectList />,
-                        loader: projectListLoader
-                    },
-                    {
-                        path: "/:project",
-                        element: <Project />,
-                        loader: projectLoader
-                    },
-                ]
-            }
-        ],
-    }
+          {
+            index: true, 
+            element: <ProjectList />,
+            loader: projectListLoader
+          },
+          {
+            path: "/:project",
+            element: <Project />,
+            loader: projectLoader
+          },
+        ]
+      }
+    ],
+  }
 ]);
 
 const reactEntry = document.createElement('div');
@@ -40,7 +40,7 @@ document.body.appendChild(reactEntry);
 
 const root = createRoot(reactEntry);
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
